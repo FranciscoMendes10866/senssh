@@ -1,0 +1,37 @@
+{
+  "name": "node-puppeteer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "update": "yarn upgrade --latest",
+    "dev": "clear && ts-node-dev --cls -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify --files ./src/index.ts",
+    "build": "babel src --extensions \".js,.ts\" --out-dir build --copy-files --no-copy-ignored",
+    "serve": "node ./build/index.js",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --fix src --ext .ts"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.7",
+    "@types/express": "^4.17.8",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "puppeteer": "^5.3.1",
+    "typescript": "^4.0.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/node": "^14.11.2",
+    "@types/puppeteer": "^3.0.2",
+    "@typescript-eslint/eslint-plugin": "^4.2.0",
+    "@typescript-eslint/parser": "^4.2.0",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "ts-node-dev": "^1.0.0-pre.63"
+  }
+}
