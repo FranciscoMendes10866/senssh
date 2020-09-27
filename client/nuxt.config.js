@@ -56,10 +56,10 @@ export default {
         },
         results: {
           bg: '#d4d8f0',
-          btn: '#fffffe',
+          crd: '#fffffe',
           txt: '#232946',
-          inp: '#fffffe',
-          brd: '#232946',
+          btn: '#232946',
+          btx: '#b8c1ec',
         },
       },
     },
