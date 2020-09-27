@@ -10,10 +10,7 @@ app.use(cors());
 
 app.post('/crawler', async (req: Request, res: Response) => {
   // Lauches the browser
-  const browser = await puppeteer.launch({
-    headless: false,
-    defaultViewport: null,
-  });
+  const browser = await puppeteer.launch();
   // Opens a new Tab
   const page = await browser.newPage();
   // This is the Base URL
@@ -43,4 +40,4 @@ app.post('/crawler', async (req: Request, res: Response) => {
   return res.json(results);
 });
 
-app.listen(4444);
+app.listen(3333);
